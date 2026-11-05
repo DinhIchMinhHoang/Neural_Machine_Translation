@@ -1,0 +1,21 @@
+/* custom Select: trigger + fixed-position glass popover */
+.sel-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:var(--s2);min-width:140px;max-width:100%;padding:6px var(--s3);border-radius:10px;background:var(--well-hi);color:var(--fog-0);box-shadow:inset 0 0 0 1px var(--hair);font-size:var(--fs-md);text-align:left}
+.sel-btn:hover{background:var(--hover)}
+.sel-btn[aria-expanded=true]{box-shadow:inset 0 0 0 1px var(--blue-soft)}
+.sel-chev{width:14px;height:14px;color:var(--fog-2);transition:transform .3s var(--spring)}
+.sel-btn[aria-expanded=true] .sel-chev{transform:rotate(180deg)}
+.sel-pop.glass{position:fixed;z-index:60;max-height:240px;overflow:auto;padding:4px;transform-origin:top center;animation:selIn .32s var(--spring) both}
+.sel-pop.glass.up{transform-origin:bottom center}
+.sel-pop.glass.out{animation:selOut .14s ease-in both;pointer-events:none}
+.sel-opt{display:flex;align-items:center;justify-content:space-between;gap:var(--s2);height:32px;padding:0 var(--s3);border-radius:10px;font-size:var(--fs-md);color:var(--fog-1);cursor:pointer;transition:background .15s,color .15s}
+.sel-opt.act{background:var(--hover);color:var(--fog-0)}
+.sel-opt:active{background:color-mix(in srgb,var(--blue) 25%,transparent)}
+.sel-opt.on{color:var(--fog-0)}
+.sel-opt svg.i{width:14px;height:14px;color:var(--blue-soft)}
+@keyframes selIn{from{opacity:0;transform:translateY(-6px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes selOut{to{opacity:0;transform:scale(.97)}}
+.sel-pop.up{--dy:6px}
+.sel-pop.glass.up{animation-name:selInUp}
+@keyframes selInUp{from{opacity:0;transform:translateY(6px) scale(.96)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.sel-pop.glass,.sel-chev{animation:none!important;transition:none}}
+.reduce .sel-pop.glass,.reduce .sel-chev{animation:none!important;transition:none}

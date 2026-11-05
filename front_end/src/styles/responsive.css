@@ -1,0 +1,24 @@
+/* responsive: imported last so it overrides layout/chat rules as in the original cascade */
+@media (max-width:1100px){
+  .side.right{position:fixed;right:14px;top:14px;bottom:14px;z-index:8;max-width:calc(100vw - 28px)}
+  .side.right.closed{margin-right:0}
+  .scrim.r{display:block}
+}
+@media (max-width:800px){
+  .side.left{position:fixed;left:14px;top:14px;bottom:14px;z-index:9;max-width:calc(100vw - 28px)}
+  .side.left.closed{margin-right:0}
+  .scrim.l{display:block}
+  .chat{padding-left:4%;padding-right:4%}.composer-wrap{margin-left:4%;margin-right:4%}
+  .notch{top:70px}.chat{padding-top:130px}
+  .hint{display:none}
+  /* tap-friendly: >=40px targets */
+  .iconbtn,.acts .iconbtn,.meta .copy{width:40px;height:40px}
+  .tbtn{width:44px;height:44px}
+  .btn,.field,.seg button,.chip,.toast button,select{min-height:40px}
+  .lang button{min-height:40px}
+  .hmain{min-height:48px}
+  input[type=range]{height:40px}
+  .send{width:44px;height:44px}
+  .bubble{max-width:92%}
+}
+@media (hover:none){.acts{opacity:1}}

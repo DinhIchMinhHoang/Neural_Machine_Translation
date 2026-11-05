@@ -1,0 +1,40 @@
+:root{
+  color-scheme:dark;
+  --ink-0:#02070A; --ink-1:#0A141A; --ink-2:#12202A; --ink-3:#1B2E3A;
+  --fog-0:#C9D4DA; --fog-1:#8D9CA6; --fog-2:#7C8D98;
+  --card:rgba(2,7,10,.35); --sheen:rgba(2,151,222,.07);
+  --blue:#0297DE; --blue-soft:color-mix(in srgb,#0297DE 45%,#B4C2CA);
+  --accent:#FC734D; --accent-soft:color-mix(in srgb,#FC734D 30%,#12202A);
+  --on-accent:#02070A; --knob:#C9D4DA;
+  --glass-a:rgba(18,32,42,.55); --glass-b:rgba(6,14,19,.62);
+  --hair:rgba(180,194,202,.07); --hair-hi:rgba(180,194,202,.14);
+  --edge:rgba(141,156,166,.35); --hover:rgba(141,156,166,.14); --sel:rgba(230,238,242,.035);
+  --well:rgba(2,7,10,.4); --well-hi:rgba(2,7,10,.5); --well-lang:rgba(2,7,10,.55);
+  --notch-a:rgba(18,32,42,.8); --notch-b:rgba(2,7,10,.75);
+  --shadow:rgba(2,7,10,.8); --shadow-sm:rgba(2,7,10,.3); --scrim:rgba(2,7,10,.55);
+  --err:#E8806A; --warn:#E3A857;
+  --orb1:.14; --orb2:.1; --orb3:.075; --orb4:.35;
+  --blur:24px; --r:24px;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px;
+  --fs-xs:11px; --fs-sm:12px; --fs-md:14px; --fs-lg:16px;
+  --spring:cubic-bezier(.2,.8,.2,1); --spring2:cubic-bezier(.32,.72,0,1);
+  --font:-apple-system,BlinkMacSystemFont,'SF Pro Text','SF Pro Display',system-ui,Inter,sans-serif;
+}
+/* light: same names, tinted pale surfaces + ink text (no pure colors) */
+:root[data-theme=light]{
+  color-scheme:light;
+  --ink-0:#D3DDE3; --ink-1:#E4ECF0; --ink-2:#DDE6EB; --ink-3:#C3CFD7;
+  --fog-0:#0A141A; --fog-1:#2A3A44; --fog-2:#3E4E58;
+  --card:rgba(10,20,26,.06); --sheen:rgba(2,151,222,.07);
+  --blue-soft:color-mix(in srgb,#0297DE 55%,#0A141A);
+  --accent-soft:color-mix(in srgb,#FC734D 30%,#D3DDE3);
+  --on-accent:#0A141A; --knob:#EEF3F6;
+  --glass-a:rgba(232,239,243,.66); --glass-b:rgba(211,221,227,.58);
+  --hair:rgba(10,20,26,.08); --hair-hi:rgba(238,243,246,.8);
+  --edge:rgba(238,243,246,.9); --hover:rgba(10,20,26,.09); --sel:rgba(10,20,26,.045);
+  --well:rgba(10,20,26,.06); --well-hi:rgba(10,20,26,.07); --well-lang:rgba(10,20,26,.08);
+  --notch-a:rgba(232,239,243,.85); --notch-b:rgba(211,221,227,.8);
+  --shadow:rgba(42,58,68,.35); --shadow-sm:rgba(42,58,68,.15); --scrim:rgba(10,20,26,.35);
+  --err:#B23A22; --warn:#8A5A00;
+  --orb1:.1; --orb2:.07; --orb3:.03; --orb4:.22;
+}

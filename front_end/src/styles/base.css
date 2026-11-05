@@ -1,0 +1,37 @@
+*{box-sizing:border-box;margin:0}
+html,body,#root{height:100%}
+body{background:var(--ink-0);color:var(--fog-0);font-family:var(--font);font-size:var(--fs-md);letter-spacing:-.011em;overflow:hidden;font-variant-numeric:tabular-nums;-webkit-font-smoothing:antialiased}
+button{font:inherit;color:inherit;letter-spacing:inherit;background:none;border:0;cursor:pointer;transition:transform .25s var(--spring),background .3s var(--spring),opacity .3s}
+button:active{transform:scale(.97)}
+:focus-visible{outline:2px solid var(--blue-soft);outline-offset:2px;border-radius:10px}
+svg.i{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+
+/* themed thin scrollbar: every scroll area (chat, sidebars, tables, textarea, popovers) */
+/* Chromium ignores ::-webkit-scrollbar sizing when scrollbar-width/color are set, so the standard props are Firefox-only */
+@supports not selector(::-webkit-scrollbar){*{scrollbar-width:thin;scrollbar-color:color-mix(in srgb,var(--fog-2) 40%,transparent) transparent}}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-track,::-webkit-scrollbar-corner{background:transparent}
+::-webkit-scrollbar-thumb{background:color-mix(in srgb,var(--fog-2) 40%,transparent);border-radius:99px;border:1px solid transparent;background-clip:padding-box}
+::-webkit-scrollbar-thumb:hover{background:color-mix(in srgb,var(--accent) 55%,var(--fog-2));background-clip:padding-box}
+::-webkit-scrollbar-button{display:none;width:0;height:0}
+
+/* backdrop */
+.bg{position:fixed;inset:0;overflow:hidden;z-index:0;background:radial-gradient(120% 90% at 50% 0%,var(--ink-1),var(--ink-0) 70%)}
+.orb{position:absolute;border-radius:50%;filter:blur(4px);animation:drift 28s ease-in-out infinite alternate}
+.o1{width:52vw;height:52vw;left:-10vw;top:-14vw;background:linear-gradient(135deg,var(--blue) 60%,color-mix(in srgb,var(--accent) 70%,var(--blue)));opacity:var(--orb1);animation-name:drift-a,breathe}
+.o2{width:34vw;height:34vw;right:-8vw;bottom:-10vw;background:linear-gradient(135deg,var(--blue) 40%,var(--accent));opacity:var(--orb2);animation-name:drift-b,breathe;animation-duration:34s,11s;animation-delay:-9s,-3s}
+.o3{width:22vw;height:22vw;left:46vw;bottom:8vh;background:var(--accent);opacity:var(--orb3);animation-name:drift-c,breathe;animation-duration:40s,9s;animation-delay:-15s,-5s}
+.o4{width:40vw;height:40vw;right:20vw;top:-18vw;background:var(--ink-3);opacity:var(--orb4);animation-duration:31s}
+@keyframes drift{to{transform:translate3d(8vw,6vh,0) scale(1.15)}}
+@keyframes drift-a{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(10vw,4vh,0) scale(1.12)}100%{transform:translate3d(4vw,12vh,0) scale(.95)}}
+@keyframes drift-b{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-9vw,-6vh,0) scale(1.18)}100%{transform:translate3d(-3vw,-12vh,0) scale(1.05)}}
+@keyframes drift-c{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(-14vw,-8vh,0) scale(1.35)}100%{transform:translate3d(10vw,-4vh,0) scale(.9)}}
+@keyframes breathe{0%,100%{filter:blur(4px) brightness(1)}50%{filter:blur(6px) brightness(1.35)}}
+/* slow conic sweep: blue light that tails off into a hint of accent */
+.bg::before{content:"";position:absolute;left:50%;top:50%;width:140vmax;height:140vmax;margin:-70vmax 0 0 -70vmax;border-radius:50%;opacity:.5;filter:blur(4px);background:conic-gradient(from 0deg,transparent 0 55%,color-mix(in srgb,var(--blue) 16%,transparent) 72%,color-mix(in srgb,var(--accent) 14%,transparent) 84%,transparent 92%);animation:sweep 70s linear infinite}
+@keyframes sweep{to{transform:rotate(360deg)}}
+.noise{position:absolute;inset:0;opacity:.07;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.reduce .orb,.reduce *{animation:none!important}
+@media (prefers-reduced-motion:reduce){.orb,.bubble,.bg::before{animation:none!important}}
+.reduce .bg::before{animation:none!important}
+.bg.gl .orb,.bg.gl::before{display:none} /* WebGL flow bg running: skip blur-filtered CSS fallback */

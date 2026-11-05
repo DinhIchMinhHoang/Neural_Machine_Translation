@@ -1,0 +1,22 @@
+# data
+pandas
+pyarrow
+numpy
+tqdm
+requests
+
+# viz
+matplotlib
+seaborn
+
+# tokenizers
+nltk
+pyvi
+sentencepiece
+tokenizers
+huggingface_hub
+
+# notebook
+ipykernel
+nbformat
+nbconvert

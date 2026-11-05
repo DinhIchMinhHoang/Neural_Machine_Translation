@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Translatetor</title>
+<script>/* set theme + UI lang before first paint (no flash) */
+try{var d=document.documentElement,t=localStorage.getItem('lumen.theme');
+if(t!=='light'&&t!=='auto')t='dark';
+if(t==='auto')t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';
+d.dataset.theme=t;d.lang=localStorage.getItem('lumen.ui')||'vi';}catch(e){}</script>
+</head>
+<body>
+<div class="bg"><div class="orb o4"></div><div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div><div class="noise"></div></div>
+<div id="root"></div>
+<script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

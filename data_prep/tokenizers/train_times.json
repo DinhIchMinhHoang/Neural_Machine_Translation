@@ -1,0 +1,18 @@
+{
+ "train_word_en": 17.502864000000045,
+ "train_word_vi": 26.869130799999766,
+ "train_bpe_en_8000": 6.157360499999413,
+ "train_bpe_en_16000": 6.527296999999635,
+ "train_bpe_en_32000": 7.098409999999603,
+ "train_bpe_vi_8000": 6.0854503999999,
+ "train_bpe_vi_16000": 6.683893600000374,
+ "train_bpe_vi_32000": 7.519112699999823,
+ "train_spm_unigram_en": 105.21621340000002,
+ "train_spm_unigram_vi": 104.08439159999944,
+ "train_spm_bpe_en": 10.109943700000258,
+ "train_spm_bpe_vi": 9.7060891000001,
+ "train_spm_unigram_nobf_en": 104.80014279999978,
+ "train_spm_unigram_nobf_vi": 104.16772649999984,
+ "train_joint_spm_unigram": 202.6246226000003,
+ "train_joint_bpe": 9.653318900000158
+}

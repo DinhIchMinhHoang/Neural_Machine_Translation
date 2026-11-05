@@ -1,0 +1,101 @@
+{
+  "note": "Checksums of data_prep/data/clean produced by data_prep.ipynb (SAMPLE=False). Verify with data_prep/verify_clean.py.",
+  "files": {
+    "train.en": {
+      "bytes": 543651607,
+      "sha256": "52e0ccb17dd38220da83227103754d5c922ea62a6e82ad339de2cc85754b38ba",
+      "lines": 5247518
+    },
+    "train.vi": {
+      "bytes": 702854129,
+      "sha256": "56c04d6a9aaaa02fa6501e8f798d69a99a736b63312444e5f400e823ebe5544b",
+      "lines": 5247518
+    },
+    "train.parquet": {
+      "bytes": 808599911,
+      "sha256": "a06e3c56b71887786088bcbdedf38971cf25477c0bfa38a36e651532c1060f41",
+      "rows": 5247518
+    },
+    "valid.en": {
+      "bytes": 1501644,
+      "sha256": "bb17dd0c4a9a5fd8ba628cfb95b8cce943b30dd742166acb4e237f6a17ea2465",
+      "lines": 20191
+    },
+    "valid.vi": {
+      "bytes": 2024281,
+      "sha256": "6b7edf705682facded9336eb950ca58914c700249a13bb743e4f9c7466114b23",
+      "lines": 20191
+    },
+    "valid.parquet": {
+      "bytes": 2119211,
+      "sha256": "20ccf22da790bb99cf34355b260cd4c3b93bb9ad0840caba537b7d7f17fed1c9",
+      "rows": 20191
+    },
+    "test.en": {
+      "bytes": 1612771,
+      "sha256": "dd844478b9824344314fc2b601200cf79f0f96e1ec80ed1cf834d466509be210",
+      "lines": 20259
+    },
+    "test.vi": {
+      "bytes": 2186268,
+      "sha256": "761181929ff707a9007a4b03d74ca2438cc26cde6a70e27ac17101d9f6bc858c",
+      "lines": 20259
+    },
+    "test.parquet": {
+      "bytes": 2280686,
+      "sha256": "461f8ade172a2039b0a00e6f53f1ab7cd0311c16eab087ac54ab5cce2e4fd494",
+      "rows": 20259
+    },
+    "stats.json": {
+      "bytes": 15214,
+      "sha256": "d35a9bc723f92e8d4a501450430997cc441cbfc7e6c0c6d0ea0a9e9421649a40"
+    },
+    "audit_before.json": {
+      "bytes": 1124,
+      "sha256": "e335f97252d05ed064f59b24c79f5bb68096735713393fe25c6af0f58c1dba37"
+    }
+  },
+  "stats": {
+    "rows_total": {
+      "train": 5247518,
+      "valid": 20191,
+      "test": 20259
+    },
+    "rows_by_source": {
+      "train": {
+        "iwslt15": 19768,
+        "mtet": 2461326,
+        "phomt": 2766424
+      },
+      "valid": {
+        "iwslt15": 1486,
+        "phomt": 18705
+      },
+      "test": {
+        "iwslt15": 1189,
+        "phomt": 19070
+      }
+    },
+    "raw_rows": {
+      "phomt/train": 2977999,
+      "iwslt15/train": 133317,
+      "mtet/train": 8327706,
+      "phomt/valid": 18720,
+      "iwslt15/valid": 1553,
+      "mtet/valid": 3106,
+      "phomt/test": 19151,
+      "iwslt15/test": 1268,
+      "mtet/test": 2536
+    }
+  },
+  "environment": {
+    "python": "3.12.10",
+    "pandas": "3.1.0",
+    "pyarrow": "26.0.1",
+    "numpy": "2.5.4",
+    "tokenizers": "0.23.3",
+    "sentencepiece": "0.2.2",
+    "nltk": "3.10.4",
+    "pyvi": "0.1.1"
+  }
+}

@@ -1,0 +1,11 @@
+variant,lang,rt_exact,exact,has_unk,spacing_only,other_normalization
+word,en,0.001,5,1557,3333,105
+bpe,en,1.0,5000,0,0,0
+spm_unigram,en,0.9996,4998,0,0,2
+spm_bpe,en,0.9996,4998,0,0,2
+spm_unigram_nobf,en,0.9992,4996,2,0,2
+word,vi,0.0146,73,1094,3833,0
+bpe,vi,1.0,5000,0,0,0
+spm_unigram,vi,0.9982,4991,0,0,9
+spm_bpe,vi,0.9982,4991,0,0,9
+spm_unigram_nobf,vi,0.9978,4989,2,0,9

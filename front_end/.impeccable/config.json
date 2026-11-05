@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/styles/inspector.css"
+        ],
+        "createdAt": "2026-10-31T10:09:46.948Z",
+        "reason": "orchestrator: 5px accent dot via ::after on .cell.pk (peak-attention marker), not a side border; no border-left/right in file"
+      }
+    ]
+  }
+}
